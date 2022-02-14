@@ -1,0 +1,15 @@
+@import '../moduls/variable.scss';
+
+body{
+  background: $color-2; 
+  .box{
+    @include bg-parameter(blue,100%,500px);
+    @include flex-parameter(flex,space-between,center);
+    .boxer{
+      // @include bg-parameter($color-4,$px-2,$px-2);
+      @include test(200px,$px-2,$color-2);
+    }
+  }
+  
+}
+

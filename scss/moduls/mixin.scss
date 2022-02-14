@@ -1,0 +1,26 @@
+@import '../moduls/variable.scss';
+
+@mixin  bg-parameter($clr,$wd,$he){
+    background-color: $clr;
+    width:$wd;
+    height: $he;  
+}
+@mixin flex-parameter($flex,$justify,$align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin test($size,$size-2,$color) {
+    width: $size;
+    height: $size-2;
+    background-color: $color;
+    @if($size==$px-1){
+        background-color:$color-5 ;
+    }
+    @else if($size==$px-2){
+background-color: $color-1;
+    }
+    @else{
+background-color: $color-4;
+    }
+}
