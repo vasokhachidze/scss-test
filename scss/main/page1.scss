@@ -1,15 +1,113 @@
 @import '../moduls/variable.scss';
+@import '../moduls/mixin.scss';
+@import '../moduls/classes.scss';
+*{
+  margin: 0 auto;
+  text-align: center;
+}
 
 body{
-  background: $color-2; 
-  .box{
-    @include bg-parameter(blue,100%,500px);
-    @include flex-parameter(flex,space-between,center);
-    .boxer{
-      // @include bg-parameter($color-4,$px-2,$px-2);
-      @include test(200px,$px-2,$color-2);
+  @include boxes-parameter($px-0,$px-0,$dark);
+  header{
+    @include boxes-parameter($px-content,$px-7-5,$color-none);
+    background-image:url(../image/Head.jpg);
+    @include bg-img(contain,no-repeat,center);
+    nav{
+       @include boxes-parameter($px-5,$px-1,$color-none);
+       @include float(right);
+     
+      ul{
+        @include display(flex);
+        @include display-parameter(space-between,center);
+        margin-top: $mt-2;
+      }
     }
   }
+  .first{
+    @include boxes-parameter($px-content,$px-4,$lite-dark);
+    background-image: url(../image/Head2.png);
+    @include bg-img(contain,no-repeat,right);
+    padding-top: 100px;
+    h3{
+      @include title($font-size-2,$color-h,$font-1);
+      margin-right: 500px;
+      
+
+    }
+    p{
+     @extend %paragraph;
+     width: $px-4;
+     
+    margin-left: 20px;
+    margin-top: 20px
+    }
+  }
+  .second{
+    @include boxes-parameter($px-content,$px-3,$sec-color);
+    @include display(flex);
+    @include display-parameter(space-between,center);
+    div{
+    
+      @include boxes-parameter($px-2-5,$px-2-5,$color-none);
+      h3{
+        margin-top: 20px;
+        @include title($font-size-2,$color-wt,$font-1);
+      }
+      p{
+        margin-top: 20px;
+        @extend %paragraph;
+      }
+    }
   
+  }
+  .third{
+    @include boxes-parameter($px-content,$px-10,$lite-dark);
+    padding-top: 50px;
+    div{
+      @include boxes-parameter($px-8,$px-9,$sec-color);
+    }
+  }
+  .for{
+    @include boxes-parameter($px-content,$px-3,$sec-color);
+  }
+  .five{
+    @include boxes-parameter($px-content,$px-2,$color-none);
+    background-image: url(../image/Head3.jpg);
+    @include bg-img(cover,no-repeat, top);
+  }
+  .six{
+    @include boxes-parameter($px-content,$px-4,$sec-color);
+  }
+  .seven{
+    @include boxes-parameter($px-content,$px-12,$color-none);
+    background-image: url(../image/Head3.jpg);
+    @include bg-img(contain,no-repeat, center);
+  }
+  .eight{
+    @include boxes-parameter($px-content,$px-3,$lite-dark);
+  }
+  .nine{
+    @include boxes-parameter($px-content,$px-8,$color-none);
+     background-image: url(../image/head4.jpg);
+  }
+  .ten{
+    @include boxes-parameter($px-content,$px-5,$sec-color);
+  }
+  .eleven{
+    @include boxes-parameter($px-content,$px-2,$lite-dark);
+  }
+  footer{
+    @include boxes-parameter($px-content,$px-2,$sec-color);
+  }
+
+
+
+
+
+
 }
+
+
+  
+
 

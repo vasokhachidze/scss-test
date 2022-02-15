@@ -1,26 +1,33 @@
 @import '../moduls/variable.scss';
 
-@mixin  bg-parameter($clr,$wd,$he){
-    background-color: $clr;
-    width:$wd;
-    height: $he;  
+@mixin boxes-parameter($wd,$hg,$bg-color) {
+    width: $wd;
+    height: $hg;
+    background-color: $bg-color;
 }
-@mixin flex-parameter($flex,$justify,$align){
-    display: $flex;
+@mixin display($display){
+    display: $display;
+}
+@mixin display-parameter($justify,$align) {
     justify-content: $justify;
     align-items: $align;
 }
-@mixin test($size,$size-2,$color) {
-    width: $size;
-    height: $size-2;
-    background-color: $color;
-    @if($size==$px-1){
-        background-color:$color-5 ;
-    }
-    @else if($size==$px-2){
-background-color: $color-1;
-    }
-    @else{
-background-color: $color-4;
-    }
+@mixin bg-img($size,$repeat,$pos) {
+    background-size:$size;
+    background-repeat: $repeat;
+    background-position: $pos;
 }
+@mixin text($font,$cl,$ffamily){
+    font-size: $font;
+    color: $cl;
+    font-family: $ffamily;
+}
+@mixin float($float) {
+    float: $float;
+}
+@mixin title($fontsize,$fontcolor,$fontfemily){
+    font-size: $fontsize;
+    color: $fontcolor;
+    font-family: $fontfemily;
+}
+
