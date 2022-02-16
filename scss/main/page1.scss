@@ -20,7 +20,33 @@ body{
         @include display(flex);
         @include display-parameter(space-between,center);
         margin-top: $mt-2;
+      a{
+        @include title($font-size-2,$color-h,$font-1);
       }
+      }
+      
+    }
+    img{
+      width: 120px;
+      margin-left: $px-4;
+      
+    }
+    span{
+      @include title($font-size-4,$color-h,$font-1);
+      @include display(block);
+      margin: 100px 0 0 600px;
+      
+    }
+    h2{
+      @include title($font-size-5,$color-h,$font-1);
+      font-weight: bold;
+      margin: 10px 0 0 600px;
+    }
+    button{
+      @include boxes-parameter($px-3,$px-0-5,rgba(83, 102, 59, 0.4));
+      border: none;
+      margin: 50px 0 0 600px;
+    @include title($font-size-3,$color-h,$font-1);
     }
   }
   .first{
@@ -61,14 +87,54 @@ body{
   
   }
   .third{
-    @include boxes-parameter($px-content,$px-10,$lite-dark);
+    @include boxes-parameter($px-content,$px-8-5,$lite-dark);
     padding-top: 50px;
+    
     div{
-      @include boxes-parameter($px-8,$px-9,$sec-color);
+      @include boxes-parameter($px-8,$px-5-5,$sec-color);
+      #top{
+        @include boxes-parameter($px-8,$px-1-5,$color-none);
+        padding-top: 30px;
+        h3{
+          @include title($font-size-3,$color-h,$font-1);
+        }
+        h2{
+          @include title($font-size-4,$color-wt,$font-1);
+        }
+      }
+      div{
+        @include boxes-parameter($px-2,$px-2,$color-none);
+        @include float(left);
+        img{
+          width: $px-0;
+          height: $px-0;
+        }
+        h4{
+          @include title($font-size-2,$color-h,$font-1);
+          margin-top: 20px;
+        }
+        p{
+          @include title($font-size-default,$color-wt,$font-1);
+          margin-top: 20px;
+        }
+        span{
+          @include title($font-size-default,$color-wt,$font-1);
+        }
+      }
     }
   }
   .for{
-    @include boxes-parameter($px-content,$px-3,$sec-color);
+    @include boxes-parameter($px-content,$px-2-5,$sec-color);
+    padding-top: 30px;
+    h2{
+      @include title($font-size-2,$color-h,$font-1);
+    }
+    p{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include title($font-size-default,$color-wt,$font-1);
+      @include boxes-parameter($px-7,$px-0-5,$color-none);
+    }
   }
   .five{
     @include boxes-parameter($px-content,$px-2,$color-none);
@@ -77,6 +143,31 @@ body{
   }
   .six{
     @include boxes-parameter($px-content,$px-4,$sec-color);
+    padding-top: 20px;
+    h2{
+      @include title($font-size-4,$color-h,$font-1);
+      
+    }
+    h3{
+      @include title($font-size-3,$color-wt,$font-1);
+    }
+    div{
+      margin-top: 30px;
+      @include boxes-parameter($px-4,$px-0-5,$color-none);
+      @include float(left);
+      img{
+        width: 60px;
+        border-radius: 50%;
+        @include float(left);
+        margin-left: 100px;
+      }
+      h5{
+        @include title($font-size-default,$color-h,$font-1);
+      }
+      p{
+        @include title($font-size-default,$color-wt,$font-1);
+      }
+    }
   }
   .seven{
     @include boxes-parameter($px-content,$px-12,$color-none);
@@ -85,19 +176,120 @@ body{
   }
   .eight{
     @include boxes-parameter($px-content,$px-3,$lite-dark);
-  }
+    padding-top: 30px;
+    
+    h4{
+      @include title($font-size-4,$color-wt,$font-1);
+    
+    }
+    form{
+      @include boxes-parameter($px-content,$px-2,$color-none);
+      @include display(flex);
+      @include display-parameter(space-between,center);
+    }
+    input,select{
+     @include display(block);
+     @include boxes-parameter($px-2,$mt-3,$color-none);
+     margin-top: 15px;
+     color: $color-h;
+     border: 2px solid $color-h;
+     border-radius: 10px;
+    }
+    
+    
+   }
   .nine{
     @include boxes-parameter($px-content,$px-8,$color-none);
      background-image: url(../image/head4.jpg);
   }
   .ten{
     @include boxes-parameter($px-content,$px-5,$sec-color);
+    padding-top: $mt-2;
+    h2{
+      @include title($font-size-4,$color-h,$font-1);
+      
+    }
+    h3{
+      @include title($font-size-3,$color-wt,$font-1);
+    }
+    #box{
+      @include boxes-parameter($px-content,$px-4,$color-none);
+      @include display(flex);
+      @include display-parameter(space-between,center);  
+      div{
+        @include boxes-parameter($px-2,$px-3-5,$color-wt);
+        text-align: left;
+        img{
+         width: $px-0;
+         height: 180px;
+       }
+       span{
+         @include display(block);
+         text-align: left;
+         @include title($font-size-default,$dark,$font-1);
+         font-weight: bold;
+         margin: 10px 5px;
+        }
+       p{
+        text-align: left;
+        margin: 15px 5px;
+        @include title($font-size-default,$dark,$font-1);
+       }
+       a{
+         color: $dark;
+         font-weight: bold;
+         margin-left: 5px;
+         border-bottom: 5px solid $color-h;
+       }
+
+      }
+    }
   }
   .eleven{
-    @include boxes-parameter($px-content,$px-2,$lite-dark);
+    @include boxes-parameter($px-content,$px-2-5,$lite-dark);
+    padding-top: 30px;
+    p{
+      @include title($font-size-default,$color-h,$font-1);
+      width: $px-5;
+      margin-top: 20px;
+    }
+    span{
+      @include title($font-size-2,$color-h,$font-1);
+      @include display(block);
+    }
+    i{
+      font-size: 30px;
+      width: 50px;
+      color: $sec-color;
+      margin-top: 15px;
+      cursor: pointer;
+      
+    }
+  
   }
   footer{
-    @include boxes-parameter($px-content,$px-2,$sec-color);
+    @include boxes-parameter($px-content,$px-2-5,$sec-color);
+    @include display(flex);
+    @include display-parameter(space-between,center);
+    padding-top: 55px;
+    font-family: $font-1;
+    color: $color-h;
+    h3{
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #left{
+     @include boxes-parameter($px-3,$px-2,$color-none);
+     text-align: left;
+    }
+    div{
+      @include boxes-parameter($px-2,$px-2,$color-none);
+      span{
+        @include display(block);
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    }
   }
 
 
